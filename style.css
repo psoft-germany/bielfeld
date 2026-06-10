@@ -313,7 +313,7 @@ body.menu-open #navbar {
 .h2 i { font-style: normal; color: var(--brick-red); }
 #about .h2 i,
 #gallery .h2 i,
-#consultation .h2 i { color: var(--blue-accent); }
+#consultation .h2 i { color: var(--brick-red); }
 
 /* ─── Leistungen ──────────────────────────────────────── */
 #services { background: transparent; }
@@ -349,7 +349,7 @@ body.menu-open #navbar {
   font-family: 'Lato', sans-serif;
   font-size: 0.50rem;
   letter-spacing: 0.40em;
-  color: var(--blue-accent);
+  color: var(--brick-red);
   display: block;
   margin-bottom: 1.6rem;
 }
@@ -454,7 +454,7 @@ body.menu-open #navbar {
 #about { background: transparent; }
 #about .label,
 #gallery .label,
-#consultation .label { color: var(--blue-accent); }
+#consultation .label { color: var(--brick-red); }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -467,9 +467,9 @@ body.menu-open #navbar {
 }
 .about-body strong { color: var(--sand-light); }
 
-.divider { width: 48px; height: 1px; background: var(--blue-accent); margin: 2rem 0; }
+.divider { width: 48px; height: 1px; background: var(--brick-red); margin: 2rem 0; }
 
-.timeline { border-left: 1px solid rgba(125, 175, 200, 0.25); }
+.timeline { border-left: 1px solid rgba(139, 62, 48, 0.30); }
 .tl-item {
   position: relative; padding: 0 0 2.5rem 2.5rem;
 }
@@ -478,11 +478,11 @@ body.menu-open #navbar {
   content: '';
   position: absolute; left: -4px; top: 11px;
   width: 7px; height: 7px;
-  background: var(--blue-accent); border-radius: 50%;
+  background: var(--brick-red); border-radius: 50%;
 }
 .tl-year {
   font-family: 'Marcellus', serif;
-  font-size: 1.75rem; color: var(--blue-accent);
+  font-size: 1.75rem; color: var(--brick-red);
   line-height: 1; margin-bottom: 0.3rem;
 }
 .tl-text { font-size: 0.93rem; line-height: 1.78; color: var(--text-body); }
@@ -554,7 +554,7 @@ body.menu-open #navbar {
   border-bottom: 1px solid var(--hairline);
 }
 .feature-list li:first-child { border-top: 1px solid var(--hairline); }
-.feature-list li::before { content: '—'; color: var(--blue-accent); flex-shrink: 0; }
+.feature-list li::before { content: '—'; color: var(--brick-red); flex-shrink: 0; }
 
 /* ─── Kontakt ─────────────────────────────────────────── */
 #contact { background: transparent; }
@@ -582,7 +582,7 @@ body.menu-open #navbar {
 }
 .c-hours-title {
   font-size: 0.54rem; letter-spacing: 0.40em;
-  text-transform: uppercase; color: var(--blue-accent); margin-bottom: 1.2rem;
+  text-transform: uppercase; color: var(--brick-red); margin-bottom: 1.2rem;
 }
 .h-row {
   display: flex; justify-content: space-between;
@@ -642,9 +642,9 @@ footer {
   transition: transform 0.38s ease, opacity 0.28s ease;
   transform-origin: center;
 }
-/* closed: two parallel lines, top one slightly shorter for asymmetry */
-.nav-hamburger span:nth-child(1) { width: 24px; }
-.nav-hamburger span:nth-child(2) { width: 16px; }
+/* closed: two parallel lines, equal length */
+.nav-hamburger span:nth-child(1) { width: 22px; }
+.nav-hamburger span:nth-child(2) { width: 22px; }
 /* open: both lines same length, cross into an X */
 .nav-hamburger.open span:nth-child(1) { width: 22px; transform: translateY(3.5px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { width: 22px; transform: translateY(-3.5px) rotate(-45deg); }
