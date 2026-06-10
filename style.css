@@ -1,4 +1,4 @@
-/* ─── Variables & Reset ───────────────────────────────── */
+/* ─── Variables & Reset ──────────────────────────────── */
 :root {
   --dark:         #060a0c;
   --brick-red:    #8B3E30;
@@ -642,7 +642,7 @@ footer {
   transition: transform 0.38s ease, opacity 0.28s ease;
   transform-origin: center;
 }
-/* closed: two parallel lines, equal length */
+/* closed: two parallel lines, top one slightly shorter for asymmetry */
 .nav-hamburger span:nth-child(1) { width: 22px; }
 .nav-hamburger span:nth-child(2) { width: 22px; }
 /* open: both lines same length, cross into an X */
@@ -709,7 +709,8 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 900px) {
   .container { padding: 0 1.8rem; }
   nav { padding: 1.4rem 1.8rem; }
-  nav.scrolled { padding: 0.9rem 1.8rem; }
+  nav.scrolled {
+  /* placeholder */ padding: 0.9rem 1.8rem; }
   .nav-links, .nav-tel { display: none; }
   .nav-hamburger { display: flex; }
   .section { padding: 5rem 0; }
