@@ -563,7 +563,7 @@ body.menu-open #navbar {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 6rem; align-items: start;
 }
-.contact-info { margin-top: 2.5rem; }
+.contact-info { margin-top: 4rem; }
 .c-block { margin-bottom: 2.2rem; }
 .c-label {
   font-size: 0.54rem; letter-spacing: 0.42em;
