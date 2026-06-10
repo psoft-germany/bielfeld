@@ -5,6 +5,7 @@
   --brick-mid:    #9B4A3A;
   --sandstone:    #C8BAA8;
   --sand-light:   #E4D8C4;
+  --dark-blue:    #0F1E24;
   --text-body:    rgba(200, 186, 168, 0.80);
   --text-dim:     rgba(200, 186, 168, 0.38);
   --hairline:     rgba(200, 186, 168, 0.13);
@@ -443,6 +444,9 @@ nav.scrolled {
 
 /* ─── Geschichte / About ──────────────────────────────── */
 #about { background: transparent; }
+#about .label,
+#gallery .label,
+#consultation .label { color: var(--dark-blue); }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -455,7 +459,7 @@ nav.scrolled {
 }
 .about-body strong { color: var(--sand-light); }
 
-.divider { width: 48px; height: 1px; background: var(--brick-red); margin: 2rem 0; }
+.divider { width: 48px; height: 1px; background: var(--dark-blue); margin: 2rem 0; }
 
 .timeline { border-left: 1px solid var(--hairline); }
 .tl-item {
@@ -466,11 +470,11 @@ nav.scrolled {
   content: '';
   position: absolute; left: -4px; top: 11px;
   width: 7px; height: 7px;
-  background: var(--brick-red); border-radius: 50%;
+  background: var(--dark-blue); border-radius: 50%;
 }
 .tl-year {
   font-family: 'Marcellus', serif;
-  font-size: 1.75rem; color: var(--brick-red);
+  font-size: 1.75rem; color: var(--dark-blue);
   line-height: 1; margin-bottom: 0.3rem;
 }
 .tl-text { font-size: 0.93rem; line-height: 1.78; color: var(--text-body); }
@@ -542,7 +546,7 @@ nav.scrolled {
   border-bottom: 1px solid var(--hairline);
 }
 .feature-list li:first-child { border-top: 1px solid var(--hairline); }
-.feature-list li::before { content: '—'; color: var(--brick-red); flex-shrink: 0; }
+.feature-list li::before { content: '—'; color: var(--dark-blue); flex-shrink: 0; }
 
 /* ─── Kontakt ─────────────────────────────────────────── */
 #contact { background: transparent; }
@@ -621,21 +625,21 @@ footer {
 /* ─── Hamburger Button ────────────────────────────────── */
 .nav-hamburger {
   display: none; flex-direction: column; justify-content: center;
-  align-items: flex-end; gap: 5px; width: 36px; height: 36px;
+  align-items: flex-end; gap: 6px; width: 36px; height: 36px;
   background: transparent; border: none; cursor: pointer; padding: 2px;
   z-index: 300; flex-shrink: 0;
 }
 .nav-hamburger span {
-  display: block; height: 1px; background: var(--sand-light);
-  transition: transform 0.38s ease, opacity 0.28s ease, width 0.32s ease;
+  display: block; height: 1px; width: 24px; background: var(--sand-light);
+  transition: transform 0.38s ease, opacity 0.28s ease;
   transform-origin: center;
 }
-.nav-hamburger span:nth-child(1) { width: 28px; }
-.nav-hamburger span:nth-child(2) { width: 20px; }
-.nav-hamburger span:nth-child(3) { width: 28px; }
-.nav-hamburger.open span:nth-child(1) { width: 26px; transform: translateY(6px) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav-hamburger.open span:nth-child(3) { width: 26px; transform: translateY(-6px) rotate(-45deg); }
+/* closed: two parallel lines, top one slightly shorter for asymmetry */
+.nav-hamburger span:nth-child(1) { width: 24px; }
+.nav-hamburger span:nth-child(2) { width: 16px; }
+/* open: both lines same length, cross into an X */
+.nav-hamburger.open span:nth-child(1) { width: 22px; transform: translateY(3.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { width: 22px; transform: translateY(-3.5px) rotate(-45deg); }
 
 /* ─── Mobile Menu Overlay ─────────────────────────────── */
 body.menu-open { overflow: hidden; }
