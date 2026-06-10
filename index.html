@@ -22,7 +22,27 @@
     <li><a href="#contact">Kontakt</a></li>
   </ul>
   <a href="tel:+49234351048" class="nav-tel">0234 35 10 48</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
+  <nav class="mobile-menu-inner">
+    <ul class="mobile-nav-links">
+      <li><a href="#services" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Galerie</a></li>
+      <li><a href="#about" class="mobile-nav-link">Geschichte</a></li>
+      <li><a href="#consultation" class="mobile-nav-link">Beratung</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Kontakt</a></li>
+    </ul>
+    <a href="tel:+49234351048" class="mobile-nav-tel">0234 35 10 48</a>
+    <span class="mobile-nav-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</span>
+  </nav>
+</div>
 
 
 <!-- ════════════════════════════════════════════
@@ -388,6 +408,35 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 70);
   }, { passive: true });
+
+  // ── Hamburger / Mobile Menu ────────────────────────────
+  const hamburger   = document.getElementById('navHamburger');
+  const mobileMenu  = document.getElementById('navMobileMenu');
+  const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-tel');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
+  }
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
 
   // ── Scroll-reveal via IntersectionObserver ─────────────
   const reveals = document.querySelectorAll('.reveal');
