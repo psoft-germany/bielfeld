@@ -308,7 +308,7 @@ body.menu-open #navbar {
   font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   line-height: 1.08;
   color: var(--sand-light);
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 .h2 i { font-style: normal; color: var(--brick-red); }
 #about .h2 i,
@@ -467,7 +467,7 @@ body.menu-open #navbar {
 }
 .about-body strong { color: var(--sand-light); }
 
-.divider { width: 48px; height: 1px; background: var(--brick-red); margin: 2rem 0; }
+.divider { display: none; }
 
 .timeline { border-left: 1px solid rgba(139, 62, 48, 0.30); }
 .tl-item {
