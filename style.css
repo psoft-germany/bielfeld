@@ -1,4 +1,4 @@
-/* ─── Variables & Reset ──────────────────────────────── */
+/* ─── Variables & Reset ───────────────────────────────── */
 :root {
   --dark:         #060a0c;
   --brick-red:    #8B3E30;
@@ -563,6 +563,7 @@ body.menu-open #navbar {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 6rem; align-items: start;
 }
+.contact-info { margin-top: 2.5rem; }
 .c-block { margin-bottom: 2.2rem; }
 .c-label {
   font-size: 0.54rem; letter-spacing: 0.42em;
@@ -667,9 +668,9 @@ body.menu-open { overflow: hidden; }
 }
 .mobile-nav-links {
   list-style: none; width: 100%; max-width: 400px;
-  border-top: 1px solid var(--hairline);
 }
 .mobile-nav-links li { border-bottom: 1px solid var(--hairline); }
+.mobile-nav-links li:last-child { border-bottom: none; }
 .mobile-nav-link {
   display: block; font-family: 'Marcellus', serif;
   font-size: clamp(1.6rem, 6vw, 2.2rem);
