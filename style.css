@@ -592,6 +592,46 @@ body.menu-open #navbar {
   border-bottom: 1px solid var(--hairline);
 }
 .h-row:last-child { border-bottom: none; }
+/* ─── Kontakt Karte (Dark Mode Filter) ────────────────── */
+.contact-map-wrap {
+  border: 1px solid var(--hairline);
+  padding: 0.4rem;
+  background: rgba(200, 186, 168, 0.02);
+  min-height: 420px;
+  display: flex;
+}
+
+.styled-map {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  border: 0;
+  
+  /* Der CSS-Trick: Invertiert die Farben, nimmt die Sättigung raus 
+     und korrigiert die Wasserfarbe mit hue-rotate */
+  filter: grayscale(80%) invert(95%) contrast(85%) hue-rotate(180deg);
+  opacity: 0.85;
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+/* Optionaler Hover-Effekt: Karte wird bei Mouseover etwas klarer */
+@media (hover: hover) {
+  .contact-map-wrap:hover .styled-map {
+    opacity: 1;
+    filter: grayscale(40%) invert(95%) contrast(90%) hue-rotate(180deg);
+  }
+}
+
+/* Anpassung für mobile Geräte */
+@media (max-width: 900px) {
+  .contact-map-wrap {
+    min-height: 350px;
+  }
+  .styled-map {
+    min-height: 330px;
+  }
+}
+
 
 /* ─── Footer ──────────────────────────────────────────── */
 footer {
