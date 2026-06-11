@@ -161,15 +161,17 @@ body.menu-open #navbar {
   overflow: hidden;
 }
 
-/* Additional gradient on top of global bg – strengthens left side for hero text only */
+/* Additional gradient on top of global bg – dark zone centred on the text block,
+   fades organically rightward and downward. Bottom of hero = fully transparent
+   → no edge at the section boundary. */
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    linear-gradient(to bottom, transparent 48%, rgba(6,10,12,0.96) 100%),
-    linear-gradient(to right,
-      rgba(5,9,11,.88) 0%,
-      rgba(5,9,11,.58) 42%,
-      rgba(5,9,11,.08) 100%);
+    radial-gradient(ellipse 72% 62% at 14% 36%,
+      rgba(6,10,12,0.93) 0%,
+      rgba(6,10,12,0.55) 38%,
+      transparent 60%),
+    linear-gradient(to right, rgba(5,9,11,.42) 0%, transparent 52%);
 }
 
 /* Legacy hero-photo div is now vestigial – hidden */
@@ -767,6 +769,13 @@ body.menu-open { overflow: hidden; }
   .gallery-masonry { columns: 2; }
   .hero-vline { display: none; }
   .hero-content { padding: 0 1.8rem 5rem; max-width: 100%; text-align: center; }
+  /* On mobile the text is centred, so centre the dark zone too */
+  .hero-bg {
+    background: radial-gradient(ellipse 115% 55% at 50% 32%,
+      rgba(6,10,12,0.92) 0%,
+      rgba(6,10,12,0.50) 40%,
+      transparent 62%);
+  }
   .hero-rule { margin: 1.8rem auto; }
   .hero-actions { justify-content: center; }
   .consult-img-wrap::after { display: none; }
