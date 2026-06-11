@@ -164,10 +164,12 @@ body.menu-open #navbar {
 /* Additional gradient on top of global bg – strengthens left side for hero text only */
 .hero-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(to right,
-    rgba(5,9,11,.88) 0%,
-    rgba(5,9,11,.58) 42%,
-    rgba(5,9,11,.08) 100%);
+  background:
+    linear-gradient(to bottom, transparent 48%, rgba(6,10,12,0.96) 100%),
+    linear-gradient(to right,
+      rgba(5,9,11,.88) 0%,
+      rgba(5,9,11,.58) 42%,
+      rgba(5,9,11,.08) 100%);
 }
 
 /* Legacy hero-photo div is now vestigial – hidden */
@@ -185,7 +187,7 @@ body.menu-open #navbar {
 .hero-content {
   position: relative; z-index: 2;
   text-align: left;
-  padding: 0 0 5rem 6rem;
+  padding: 7rem 0 0 6rem;
   max-width: 640px;
 }
 
@@ -292,7 +294,7 @@ body.menu-open #navbar {
 
 /* ─── Shared Section Helpers ──────────────────────────── */
 .section {
-  padding: 7.5rem 0;
+  padding: 9.5rem 0;
   border-top: 1px solid var(--hairline);
 }
 .container { max-width: 1240px; margin: 0 auto; padding: 0 3.5rem; }
@@ -316,7 +318,7 @@ body.menu-open #navbar {
 #consultation .h2 i { color: var(--brick-red); }
 
 /* ─── Leistungen ──────────────────────────────────────── */
-#services { background: transparent; }
+#services { background: transparent; border-top: none; }
 
 .services-lead {
   font-family: 'Marcellus', serif;
@@ -754,7 +756,7 @@ body.menu-open { overflow: hidden; }
   /* placeholder */ padding: 0.9rem 1.8rem; }
   .nav-links, .nav-tel { display: none; }
   .nav-hamburger { display: flex; }
-  .section { padding: 5rem 0; }
+  .section { padding: 6.5rem 0; }
   .about-grid,
   .consult-grid,
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
