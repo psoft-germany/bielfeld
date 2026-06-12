@@ -565,8 +565,12 @@ body.menu-open #navbar {
 
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 6rem; align-items: start;
+  grid-template-rows: auto auto;
+  gap: 3rem 6rem; align-items: start;
 }
+.contact-grid > div:first-child { grid-column: 1; grid-row: 1; }
+.contact-map-wrap { grid-column: 2; grid-row: 1 / 3; }
+.c-hours { grid-column: 1; grid-row: 2; }
 .contact-info { margin-top: 4rem; }
 .c-block { margin-bottom: 2.2rem; }
 .c-label {
@@ -581,7 +585,6 @@ body.menu-open #navbar {
 .c-value a:hover { color: var(--brick-red); }
 
 .c-hours {
-  margin-top: 2rem;
   border: 1px solid var(--hairline);
   padding: 1.5rem 1.8rem;
 }
@@ -636,6 +639,82 @@ body.menu-open #navbar {
   }
 }
 
+
+/* ─── Geschichte: Handwerker-Porträt ─────────────────── */
+.about-portrait {
+  position: relative;
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+.about-portrait img {
+  width: 100%;
+  display: block;
+  filter: grayscale(15%) sepia(8%);
+}
+.about-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6,10,12,0.10) 0%,
+    rgba(6,10,12,0.55) 100%
+  );
+  pointer-events: none;
+}
+.about-portrait-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.2rem;
+  font-size: 0.52rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--sandstone);
+  z-index: 1;
+  opacity: 0.55;
+}
+
+/* ─── Geschichte: Werkstatt-Streifen ─────────────────── */
+.history-strip {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  max-height: 520px;
+}
+.history-strip img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
+  filter: grayscale(25%) sepia(12%);
+}
+.history-strip-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6,10,12,0.50) 0%,
+    rgba(6,10,12,0.20) 35%,
+    rgba(6,10,12,0.20) 65%,
+    rgba(6,10,12,0.70) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 4rem;
+}
+.history-strip-caption {
+  font-size: 0.52rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--sandstone);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .history-strip img { height: 320px; }
+  .history-strip-overlay { padding: 1.5rem 2rem; }
+}
 
 /* ─── Footer ──────────────────────────────────────────── */
 footer {
@@ -760,8 +839,11 @@ body.menu-open { overflow: hidden; }
   .nav-hamburger { display: flex; }
   .section { padding: 6.5rem 0; }
   .about-grid,
-  .consult-grid,
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .consult-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-grid {
+    display: flex; flex-direction: column; gap: 2.5rem;
+  }
+  .c-hours { margin-top: 0; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   /* fix border on 2-col layout */
   .s-card:nth-child(3n) { border-right: 1px solid var(--hairline); }
