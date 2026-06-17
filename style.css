@@ -173,6 +173,10 @@ body.menu-open #navbar {
       rgba(6,10,12,0.55) 38%,
       transparent 60%),
     linear-gradient(to right, rgba(5,9,11,.42) 0%, transparent 52%);
+  /* Fade the entire overlay to transparent in the bottom ~25% of the hero
+     so there is no hard edge at the hero/services boundary */
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
 }
 
 /* Legacy hero-photo div is now vestigial – hidden */
@@ -274,7 +278,7 @@ body.menu-open #navbar {
 
 /* ─── Scroll hint ─────────────────────────────────────── */
 .hero-scroll {
-  position: absolute; bottom: 2.5rem; left: 50%;
+  position: absolute; bottom: 0.7rem; left: 50%;
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
   opacity: 0; animation: fadeIn 1s ease forwards 1.8s;
@@ -558,17 +562,26 @@ body.menu-open #navbar {
   padding: 0.58rem 0;
   border-bottom: 1px solid var(--hairline);
 }
-.feature-list li:first-child { border-top: 1px solid var(--hairline); }
+.feature-list li:first-child { border-top: none; }
 .feature-list li::before { content: '—'; color: var(--brick-red); flex-shrink: 0; }
 
 /* ─── Kontakt ─────────────────────────────────────────── */
 #contact { background: transparent; }
 
 .contact-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 6rem; align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "info map"
+    "hours map";
+  column-gap: 6rem;
+  align-items: start;
 }
-.contact-info { margin-top: 4rem; }
+.contact-info-top   { grid-area: info; }
+.contact-map-wrap   { grid-area: map; align-self: stretch; }
+.contact-hours-wrap { grid-area: hours; padding-top: 3rem; }
+
+.contact-blocks { margin-top: 4rem; }
 .c-block { margin-bottom: 2.2rem; }
 .c-label {
   font-size: 0.54rem; letter-spacing: 0.42em;
@@ -608,8 +621,8 @@ body.menu-open #navbar {
 
 .styled-map {
   width: 100%;
-  height: auto;
-  min-height: 400px;
+  height: 100%;
+  min-height: 420px;
   border: 0;
   
   /* Der CSS-Trick: Invertiert die Farben, nimmt die Sättigung raus 
@@ -761,8 +774,17 @@ body.menu-open { overflow: hidden; }
   .nav-hamburger { display: flex; }
   .section { padding: 6.5rem 0; }
   .about-grid,
-  .consult-grid,
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .consult-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "map"
+      "hours";
+    gap: 3rem;
+  }
+  .contact-map-wrap { align-self: auto; }
+  .contact-hours-wrap { padding-top: 0; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   /* fix border on 2-col layout */
   .s-card:nth-child(3n) { border-right: 1px solid var(--hairline); }
@@ -776,6 +798,8 @@ body.menu-open { overflow: hidden; }
       rgba(6,10,12,0.92) 0%,
       rgba(6,10,12,0.50) 40%,
       transparent 62%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
   }
   .hero-rule { margin: 1.8rem auto; }
   .hero-actions { justify-content: center; }

@@ -60,7 +60,7 @@
     <p class="hero-overline">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</p>
     <h1 class="hero-title">BILDHAUEREI<br><span style="color: var(--brick-red)">BIELFELD</span></h1>
     <div class="hero-rule"></div>
-    <p class="hero-sub">Vier Generationen. Eine Leidenschaft.</p>
+    <p class="hero-sub">Drei Generationen. Eine Leidenschaft.</p>
     <div class="hero-actions">
       <a href="#gallery" class="btn btn--solid">Unsere Arbeiten</a>
       <a href="#contact" class="btn btn--outline">Beratung vereinbaren</a>
@@ -226,7 +226,7 @@
         <h2 class="h2 reveal d1">Über <i>110 Jahre</i><br>Tradition in Bochum</h2>
         <div class="divider reveal d2"></div>
         <div class="reveal d2">
-          <p>Die Bildhauerei Bielfeld ist ein Bochumer Original. Was 1912 als handwerkliche Schnitzerei begann, is heute ein renommierter Familienbetrieb in <strong>vier Generationen</strong> – mit Werken, die in ganz Deutschland und Österreich – und sogar in den USA – stehen.</p>
+          <p>Die Bildhauerei Bielfeld ist ein Bochumer Original. Was 1912 als handwerkliche Schnitzerei begann, ist heute ein renommierter Familienbetrieb in <strong>dritter Generation</strong> – mit Werken, die in ganz Deutschland und Österreich – und sogar in den USA – stehen.</p>
           <p>Unser Name steht für handwerkliche Perfektion, künstlerischen Anspruch und persönliche Begleitung in einem der bedeutsamsten Momente des Lebens. Jedes Grabmal, jede Skulptur ist ein Unikat.</p>
           <p>Klaus Bielfeld, Steinbildhauermeister und Obermeister der Bildhauer- und Steinmetz-Innung Bochum, wurde 1999 mit dem <strong>Staatspreis des Landes NRW</strong> ausgezeichnet. Bis heute führen <strong>Monika und Klaus Bielfeld</strong> das Unternehmen gemeinsam und stehen persönlich für Qualität und Beratung.</p>
         </div>
@@ -322,11 +322,12 @@
   <div class="container">
     <div class="contact-grid">
 
-      <div>
+      <!-- Info: label + heading + address/tel/email/website -->
+      <div class="contact-info-top">
         <span class="label reveal">Finden Sie uns</span>
         <h2 class="h2 reveal d1">Kontakt &amp;<br><i>Anfahrt</i></h2>
 
-        <div class="contact-info reveal d2">
+        <div class="contact-blocks reveal d2">
           <div class="c-block">
             <div class="c-label">Adresse</div>
             <div class="c-value">
@@ -353,23 +354,11 @@
               <a href="https://www.bielfeld.de" target="_blank">www.bielfeld.de</a>
             </div>
           </div>
-
-          <div class="c-hours">
-            <div class="c-hours-title">Öffnungszeiten</div>
-            <div class="h-row">
-              <span>Montag – Freitag</span><span>Nach Vereinbarung</span>
-            </div>
-            <div class="h-row">
-              <span>Samstag</span><span>Nach Vereinbarung</span>
-            </div>
-            <div class="h-row">
-              <span>Sonntag &amp; Feiertage</span><span>Geschlossen</span>
-            </div>
-          </div>
         </div>
       </div>
 
-            <div class="contact-map-wrap reveal d2">
+      <!-- Map – on mobile appears between Anschrift and Öffnungszeiten -->
+      <div class="contact-map-wrap reveal d2">
         <iframe class="styled-map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.0701091603582!2d7.2488506999999975!3d51.47522739999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b91fe6a076a40d%3A0x2d378d383970ac08!2sBielfeld%20GmbH!5e0!3m2!1sde!2scr!4v1780946979816!5m2!1sde!2scr"
                 width="100%"
@@ -379,6 +368,21 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
+      <!-- Hours – below address on desktop, below map on mobile -->
+      <div class="contact-hours-wrap reveal d3">
+        <div class="c-hours">
+          <div class="c-hours-title">Öffnungszeiten</div>
+          <div class="h-row">
+            <span>Montag – Freitag</span><span>Nach Vereinbarung</span>
+          </div>
+          <div class="h-row">
+            <span>Samstag</span><span>Nach Vereinbarung</span>
+          </div>
+          <div class="h-row">
+            <span>Sonntag &amp; Feiertage</span><span>Geschlossen</span>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -400,8 +404,8 @@
         <li><a href="#gallery">Galerie</a></li>
         <li><a href="#about">Geschichte</a></li>
         <li><a href="#contact">Kontakt</a></li>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
       <div class="footer-legal">
         © 2025 Bielfeld GmbH<br>Alle Rechte vorbehalten

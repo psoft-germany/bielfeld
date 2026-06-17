@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Bildhauerei Bielfeld GmbH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ─── Legal Page Layout ─────────────────────────── */
+    .legal-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 10rem 3.5rem 7rem;
+    }
+    .legal-back {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.56rem; letter-spacing: 0.34em; text-transform: uppercase;
+      color: var(--text-dim); text-decoration: none;
+      transition: color 0.3s; margin-bottom: 3.5rem;
+    }
+    .legal-back:hover { color: var(--brick-red); }
+    .legal-back::before { content: '←'; font-size: 0.75rem; }
+    .legal-title {
+      font-family: 'Marcellus', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--sand-light); line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+    .legal-title i { font-style: normal; color: var(--brick-red); }
+    .legal-divider {
+      width: 40px; height: 1px;
+      background: var(--brick-red);
+      margin: 2rem 0 3.5rem;
+    }
+    .legal-section { margin-bottom: 3rem; }
+    .legal-section h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 1.1rem; color: var(--sand-light);
+      margin-bottom: 1rem; letter-spacing: 0.02em;
+    }
+    .legal-section p, .legal-section address {
+      font-size: 0.97rem; line-height: 1.9;
+      color: var(--text-body); font-style: normal;
+      margin-bottom: 0.7rem;
+    }
+    .legal-section a { color: var(--brick-red); text-decoration: none; transition: opacity 0.3s; }
+    .legal-section a:hover { opacity: 0.75; }
+    .legal-note {
+      margin-top: 3rem;
+      border-top: 1px solid var(--hairline);
+      padding-top: 2rem;
+      font-size: 0.86rem; color: var(--text-dim);
+      line-height: 1.85;
+    }
+    @media (max-width: 900px) {
+      .legal-wrap { padding: 8rem 1.8rem 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="page-bg"></div>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Bielfeld <em>·</em> GmbH</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Leistungen</a></li>
+    <li><a href="index.html#gallery">Galerie</a></li>
+    <li><a href="index.html#about">Geschichte</a></li>
+    <li><a href="index.html#consultation">Beratung</a></li>
+    <li><a href="index.html#contact">Kontakt</a></li>
+  </ul>
+  <a href="tel:+49234351048" class="nav-tel">0234 35 10 48</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
+  <nav class="mobile-menu-inner">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html#services" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="index.html#gallery" class="mobile-nav-link">Galerie</a></li>
+      <li><a href="index.html#about" class="mobile-nav-link">Geschichte</a></li>
+      <li><a href="index.html#consultation" class="mobile-nav-link">Beratung</a></li>
+      <li><a href="index.html#contact" class="mobile-nav-link">Kontakt</a></li>
+    </ul>
+    <a href="tel:+49234351048" class="mobile-nav-tel">0234 35 10 48</a>
+    <span class="mobile-nav-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</span>
+  </nav>
+</div>
+
+<!-- Content -->
+<main>
+  <div class="legal-wrap">
+
+    <a href="index.html" class="legal-back">Zurück zur Startseite</a>
+
+    <span class="label">Rechtliches</span>
+    <h1 class="legal-title">Impres<i>sum</i></h1>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section">
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <address>
+        Bildhauerei Bielfeld GmbH<br>
+        Freigrafendamm 60<br>
+        44803 Bochum-Altenbochum<br>
+        Deutschland
+      </address>
+    </div>
+
+    <div class="legal-section">
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: <a href="tel:+49234351048">0234 35 10 48</a><br>
+        E-Mail: <a href="mailto:info@bielfeld.de">info@bielfeld.de</a><br>
+        Website: <a href="https://www.bielfeld.de" target="_blank">www.bielfeld.de</a>
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Vertretungsberechtigte Geschäftsführerin</h2>
+      <p>Monika Bielfeld</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Handelsregister</h2>
+      <p>
+        Amtsgericht Bochum<br>
+        <!-- HRB-Nummer bitte ergänzen -->
+        HRB: [bitte eintragen]
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Umsatzsteuer-Identifikationsnummer</h2>
+      <p>
+        Gemäß § 27a Umsatzsteuergesetz:<br>
+        <!-- USt-IdNr. bitte ergänzen -->
+        [bitte eintragen]
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+      <p>
+        Monika Bielfeld<br>
+        Freigrafendamm 60<br>
+        44803 Bochum-Altenbochum
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+      </p>
+      <p>
+        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Haftung für Links</h2>
+      <p>
+        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+      </p>
+      <p>
+        Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+      </p>
+      <p>
+        Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+      </p>
+    </div>
+
+    <div class="legal-note">
+      Quelle: Muster-Impressum von eRecht24
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="f-logo">Bielfeld <em>·</em> GmbH</div>
+        <div class="f-since">Bildhauerei &amp; Grabmale · Bochum · Seit 1912</div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html#services">Leistungen</a></li>
+        <li><a href="index.html#gallery">Galerie</a></li>
+        <li><a href="index.html#about">Geschichte</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <div class="footer-legal">
+        © 2025 Bielfeld GmbH<br>Alle Rechte vorbehalten
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 70);
+  }, { passive: true });
+  nav.classList.add('scrolled'); // always show solid nav on legal pages
+
+  const hamburger   = document.getElementById('navHamburger');
+  const mobileMenu  = document.getElementById('navMobileMenu');
+  const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-tel');
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-open');
+  }
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
+  }
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+</script>
+
+</body>
+</html>
