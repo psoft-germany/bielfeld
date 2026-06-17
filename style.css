@@ -352,6 +352,8 @@ body.menu-open #navbar {
 }
 /* remove right border from every 3rd card */
 .s-card:nth-child(3n) { border-right: none; }
+/* remove top border from first row */
+.s-card:nth-child(-n+3) { border-top: none; }
 .s-card:hover { border-top-color: var(--brick-red); }
 
 .s-num {
