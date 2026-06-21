@@ -1,17 +1,23 @@
 /* styles.css */
 /* ─── Variables & Reset ───────────────────────────────── */
 :root {
-  --dark:         #060a0c;
+  --bg-color:     #E4D8C4;
+  --dark-blue:    #0F1E24;
   --brick-red:    #8B3E30;
   --brick-mid:    #9B4A3A;
   --sandstone:    #C8BAA8;
-  --sand-light:   #E4D8C4;
-  --dark-blue:    #0F1E24;
-  --blue-accent:  #7DAFC8;
-  --text-body:    rgba(200, 186, 168, 0.80);
-  --text-dim:     rgba(200, 186, 168, 0.38);
-  --hairline:     rgba(200, 186, 168, 0.13);
-  --hairline-mid: rgba(200, 186, 168, 0.22);
+  
+  /* Text colors optimized for readability on light backgrounds */
+  --text-body:    rgba(15, 30, 36, 0.85); 
+  --text-dim:     rgba(15, 30, 36, 0.65); 
+  
+  /* Structural lines */
+  --hairline:     rgba(15, 30, 36, 0.15);
+  --hairline-mid: rgba(15, 30, 36, 0.30);
+  
+  /* Re-mapped for the light theme */
+  --sand-light:   #0F1E24; /* Mapped to dark blue for headings */
+  --true-light:   #E4D8C4; /* Used for solid buttons */
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,7 +26,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Lato', sans-serif;
-  background: var(--dark);
+  background: var(--bg-color);
   color: var(--text-body);
   overflow-x: hidden;
   max-width: 100%;
@@ -39,7 +45,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(5, 9, 11, 0.78);
+  background: rgba(228, 216, 196, 0.92);
 }
 
 /* ─── Scroll Reveal ───────────────────────────────────── */
@@ -51,20 +57,17 @@ body {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* Section headings get a more pronounced entrance */
 h2.reveal, .h2.reveal {
   transform: translateY(40px);
   transition: opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1),
               transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Labels slide in quickly */
 .label.reveal {
   transform: translateY(14px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Timeline items slide from left */
 .tl-item.reveal {
   transform: translateX(-18px);
   transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
@@ -72,7 +75,6 @@ h2.reveal, .h2.reveal {
 }
 .tl-item.reveal.visible { transform: translateX(0); }
 
-/* Service cards: staggered per-card */
 .s-card.reveal {
   transform: translateY(30px);
   transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
@@ -86,7 +88,6 @@ h2.reveal, .h2.reveal {
 .s-card:nth-child(5).reveal { transition-delay: 0.40s; }
 .s-card:nth-child(6).reveal { transition-delay: 0.49s; }
 
-/* Gallery items stagger when expanded */
 .g-item.reveal {
   transform: translateY(20px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
@@ -107,14 +108,14 @@ nav {
   border-bottom: 1px solid transparent;
 }
 nav.scrolled {
-  background: rgba(5, 9, 11, 0.92);
+  background: rgba(228, 216, 196, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   padding: 1rem 3.5rem;
   border-bottom-color: var(--hairline);
 }
 body.menu-open #navbar {
-  background: rgba(5, 9, 11, 0.97);
+  background: rgba(228, 216, 196, 0.98);
   border-bottom-color: var(--hairline);
 }
 
@@ -137,7 +138,7 @@ body.menu-open #navbar {
   text-decoration: none;
   transition: color 0.3s;
 }
-.nav-links a:hover { color: var(--sand-light); }
+.nav-links a:hover { color: var(--brick-red); }
 
 .nav-tel {
   font-size: 0.60rem;
@@ -150,7 +151,7 @@ body.menu-open #navbar {
 }
 .nav-tel:hover {
   background: var(--brick-red);
-  color: var(--sand-light);
+  color: var(--true-light);
   border-color: var(--brick-red);
 }
 
@@ -162,24 +163,18 @@ body.menu-open #navbar {
   overflow: hidden;
 }
 
-/* Additional gradient on top of global bg – dark zone centred on the text block,
-   fades organically rightward and downward. Bottom of hero = fully transparent
-   → no edge at the section boundary. */
 .hero-bg {
   position: absolute; inset: 0;
   background:
     radial-gradient(ellipse 72% 62% at 14% 36%,
-      rgba(6,10,12,0.93) 0%,
-      rgba(6,10,12,0.55) 38%,
+      rgba(228,216,196,0.93) 0%,
+      rgba(228,216,196,0.55) 38%,
       transparent 60%),
-    linear-gradient(to right, rgba(5,9,11,.42) 0%, transparent 52%);
-  /* Fade the entire overlay to transparent in the bottom ~25% of the hero
-     so there is no hard edge at the hero/services boundary */
+    linear-gradient(to right, rgba(228,216,196,.42) 0%, transparent 52%);
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
 }
 
-/* Legacy hero-photo div is now vestigial – hidden */
 .hero-photo { display: none; }
 
 .hero-vline {
@@ -233,7 +228,7 @@ body.menu-open #navbar {
   font-family: 'Marcellus', serif;
   font-style: italic;
   font-size: clamp(1.05rem, 2.2vw, 1.45rem);
-  color: var(--sandstone);
+  color: var(--text-dim);
   opacity: 0;
   animation: fadeUp 1s ease forwards 1s;
   margin-bottom: 3rem;
@@ -258,17 +253,16 @@ body.menu-open #navbar {
 }
 .btn--solid {
   background: var(--brick-red);
-  color: var(--sand-light);
+  color: var(--true-light);
   border: 1px solid var(--brick-red);
 }
 .btn--solid:hover {
   background: transparent;
-  color: var(--sand-light);
-  border-color: var(--hairline-mid);
+  color: var(--brick-red);
 }
 .btn--outline {
   background: transparent;
-  color: var(--sandstone);
+  color: var(--text-body);
   border: 1px solid var(--hairline-mid);
 }
 .btn--outline:hover {
@@ -320,9 +314,6 @@ body.menu-open #navbar {
   margin-bottom: 3.5rem;
 }
 .h2 i { font-style: normal; color: var(--brick-red); }
-#about .h2 i,
-#gallery .h2 i,
-#consultation .h2 i { color: var(--brick-red); }
 
 /* ─── Leistungen ──────────────────────────────────────── */
 #services { background: transparent; border-top: none; }
@@ -331,7 +322,7 @@ body.menu-open #navbar {
   font-family: 'Marcellus', serif;
   font-style: italic;
   font-size: clamp(1.1rem, 2.1vw, 1.45rem);
-  color: var(--sandstone);
+  color: var(--text-dim);
   max-width: 560px;
   line-height: 1.72;
   margin-bottom: 3.5rem;
@@ -350,9 +341,7 @@ body.menu-open #navbar {
   padding: 2.2rem;
   transition: border-top-color 0.35s;
 }
-/* remove right border from every 3rd card */
 .s-card:nth-child(3n) { border-right: none; }
-/* remove top border from first row */
 .s-card:nth-child(-n+3) { border-top: none; }
 .s-card:hover { border-top-color: var(--brick-red); }
 
@@ -395,7 +384,7 @@ body.menu-open #navbar {
 
 .g-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(5,9,11,.75) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(228,216,196,.85) 0%, transparent 65%);
   opacity: 0; transition: opacity 0.4s ease;
   display: flex; align-items: flex-end; padding: 1rem;
 }
@@ -405,11 +394,11 @@ body.menu-open #navbar {
 }
 .g-caption {
   font-family: 'Marcellus', serif;
-  font-style: italic; font-size: 0.93rem; color: var(--sandstone);
+  font-style: italic; font-size: 1rem; font-weight: bold; color: var(--dark-blue);
 }
 
 .g-placeholder {
-  background: rgba(200, 186, 168, 0.05);
+  background: rgba(15, 30, 36, 0.04);
   border: 1px solid var(--hairline);
   display: flex; align-items: center; justify-content: center;
   flex-direction: column; gap: 0.5rem;
@@ -427,13 +416,10 @@ body.menu-open #navbar {
   font-size: 0.85rem; color: var(--text-dim); font-style: italic;
 }
 
-/* gallery expand */
 .gallery-expand-wrap { position: relative; }
 .g-item--extra { display: none; }
 .gallery-masonry.open .g-item--extra { display: block; }
 .g-item--extra.entering { animation: fadeUp 0.55s ease both; }
-
-/* gallery-fade removed – not needed on dark photo background */
 .gallery-fade { display: none; }
 
 .gallery-toggle {
@@ -453,7 +439,7 @@ body.menu-open #navbar {
 .gallery-toggle:hover {
   background: var(--brick-red);
   border-color: var(--brick-red);
-  color: var(--sand-light);
+  color: var(--true-light);
 }
 .gallery-toggle__arrow {
   display: inline-block; transition: transform 0.4s ease;
@@ -463,9 +449,6 @@ body.menu-open #navbar {
 
 /* ─── Geschichte / About ──────────────────────────────── */
 #about { background: transparent; }
-#about .label,
-#gallery .label,
-#consultation .label { color: var(--brick-red); }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -477,8 +460,6 @@ body.menu-open #navbar {
   color: var(--text-body); margin-bottom: 1.4rem;
 }
 .about-body strong { color: var(--sand-light); }
-
-.divider { display: none; }
 
 .timeline { border-left: 1px solid rgba(139, 62, 48, 0.30); }
 .tl-item {
@@ -515,8 +496,6 @@ body.menu-open #navbar {
   max-width: 780px;
   margin: 0 auto;
 }
-
-/* Pull quote uses a scale entrance */
 .pull-quote blockquote.reveal {
   transform: translateY(28px) scale(0.98);
   transition: opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
@@ -612,11 +591,12 @@ body.menu-open #navbar {
   border-bottom: 1px solid var(--hairline);
 }
 .h-row:last-child { border-bottom: none; }
-/* ─── Kontakt Karte (Dark Mode Filter) ────────────────── */
+
+/* ─── Kontakt Karte ────────────────── */
 .contact-map-wrap {
   border: 1px solid var(--hairline);
   padding: 0.4rem;
-  background: rgba(200, 186, 168, 0.02);
+  background: rgba(15, 30, 36, 0.02);
   min-height: 420px;
   display: flex;
 }
@@ -626,38 +606,18 @@ body.menu-open #navbar {
   height: 100%;
   min-height: 420px;
   border: 0;
-  
-  /* Der CSS-Trick: Invertiert die Farben, nimmt die Sättigung raus 
-     und korrigiert die Wasserfarbe mit hue-rotate */
-  filter: grayscale(80%) invert(95%) contrast(85%) hue-rotate(180deg);
-  opacity: 0.85;
-  transition: opacity 0.4s ease, filter 0.4s ease;
 }
 
-/* Optionaler Hover-Effekt: Karte wird bei Mouseover etwas klarer */
-@media (hover: hover) {
-  .contact-map-wrap:hover .styled-map {
-    opacity: 1;
-    filter: grayscale(40%) invert(95%) contrast(90%) hue-rotate(180deg);
-  }
-}
-
-/* Anpassung für mobile Geräte */
 @media (max-width: 900px) {
-  .contact-map-wrap {
-    min-height: 350px;
-  }
-  .styled-map {
-    min-height: 330px;
-  }
+  .contact-map-wrap { min-height: 350px; }
+  .styled-map { min-height: 330px; }
 }
-
 
 /* ─── Footer ──────────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--hairline);
   padding: 4rem 0 3rem;
-  background: rgba(5, 9, 11, 0.55);
+  background: rgba(228, 216, 196, 0.55);
 }
 .footer-grid {
   display: flex; flex-direction: column;
@@ -666,7 +626,7 @@ footer {
 .footer-brand .f-logo {
   font-family: 'Marcellus', serif;
   font-size: 1.05rem; letter-spacing: 0.38em;
-  text-transform: uppercase; color: var(--sandstone);
+  text-transform: uppercase; color: var(--sand-light);
 }
 .footer-brand .f-logo em { font-style: normal; color: var(--brick-red); }
 .footer-brand .f-since {
@@ -680,7 +640,7 @@ footer {
   text-decoration: none; transition: color 0.3s;
 }
 .footer-nav a:hover { color: var(--brick-red); }
-.footer-legal { font-size: 0.78rem; color: rgba(200,186,168,.22); text-align: center; }
+.footer-legal { font-size: 0.78rem; color: var(--text-dim); text-align: center; }
 
 /* ─── Keyframes ───────────────────────────────────────── */
 @keyframes fadeUp {
@@ -703,10 +663,8 @@ footer {
   transition: transform 0.38s ease, opacity 0.28s ease;
   transform-origin: center;
 }
-/* closed: two parallel lines, top one slightly shorter for asymmetry */
 .nav-hamburger span:nth-child(1) { width: 22px; }
 .nav-hamburger span:nth-child(2) { width: 22px; }
-/* open: both lines same length, cross into an X */
 .nav-hamburger.open span:nth-child(1) { width: 22px; transform: translateY(3.5px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { width: 22px; transform: translateY(-3.5px) rotate(-45deg); }
 
@@ -715,7 +673,7 @@ body.menu-open { overflow: hidden; }
 
 .nav-mobile-menu {
   position: fixed; inset: 0; z-index: 250;
-  background: rgba(5, 9, 11, 0.97);
+  background: rgba(228, 216, 196, 0.98);
   display: flex; align-items: center; justify-content: center;
   opacity: 0; pointer-events: none;
   transition: opacity 0.42s ease;
@@ -734,7 +692,7 @@ body.menu-open { overflow: hidden; }
 .mobile-nav-link {
   display: block; font-family: 'Marcellus', serif;
   font-size: clamp(1.6rem, 6vw, 2.2rem);
-  color: var(--sandstone); text-decoration: none;
+  color: var(--sand-light); text-decoration: none;
   padding: 1rem 0; letter-spacing: 0.04em;
   transition: color 0.25s, padding-left 0.25s;
 }
@@ -758,11 +716,11 @@ body.menu-open { overflow: hidden; }
   transition: background 0.3s, color 0.3s;
 }
 .nav-mobile-menu.open .mobile-nav-tel { animation: mobileNavIn 0.45s ease both 0.5s; }
-.mobile-nav-tel:hover { background: var(--brick-red); color: var(--sand-light); }
+.mobile-nav-tel:hover { background: var(--brick-red); color: var(--true-light); }
 .mobile-nav-since {
   display: block; margin-top: 1.6rem;
   font-size: 0.51rem; letter-spacing: 0.38em; text-transform: uppercase;
-  color: rgba(200, 186, 168, 0.22);
+  color: var(--text-dim);
 }
 .nav-mobile-menu.open .mobile-nav-since { animation: mobileNavIn 0.45s ease both 0.58s; }
 
@@ -770,8 +728,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 900px) {
   .container { padding: 0 1.8rem; }
   nav { padding: 1.4rem 1.8rem; }
-  nav.scrolled {
-  /* placeholder */ padding: 0.9rem 1.8rem; }
+  nav.scrolled { padding: 0.9rem 1.8rem; }
   .nav-links, .nav-tel { display: none; }
   .nav-hamburger { display: flex; }
   .section { padding: 6.5rem 0; }
@@ -788,17 +745,15 @@ body.menu-open { overflow: hidden; }
   .contact-map-wrap { align-self: auto; }
   .contact-hours-wrap { padding-top: 0; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  /* fix border on 2-col layout */
   .s-card:nth-child(3n) { border-right: 1px solid var(--hairline); }
   .s-card:nth-child(2n) { border-right: none; }
   .gallery-masonry { columns: 2; }
   .hero-vline { display: none; }
   .hero-content { padding: 0 1.8rem 5rem; max-width: 100%; text-align: center; }
-  /* On mobile the text is centred, so centre the dark zone too */
   .hero-bg {
     background: radial-gradient(ellipse 115% 55% at 50% 32%,
-      rgba(6,10,12,0.92) 0%,
-      rgba(6,10,12,0.50) 40%,
+      rgba(228,216,196,0.92) 0%,
+      rgba(228,216,196,0.50) 40%,
       transparent 62%);
     -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
