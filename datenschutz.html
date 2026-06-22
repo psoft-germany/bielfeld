@@ -1,91 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum – Bildhauerei Bielfeld GmbH</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Marcellus&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ─── Legal Page Layout ─────────────────────────── */
-    .legal-wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 10rem 3.5rem 7rem;
-    }
-    .legal-back {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      font-size: 0.56rem; letter-spacing: 0.34em; text-transform: uppercase;
-      color: var(--text-dim); text-decoration: none;
-      transition: color 0.3s; margin-bottom: 3.5rem;
-    }
-    .legal-back:hover { color: var(--brick-red); }
-    .legal-back::before { content: '←'; font-size: 0.75rem; }
-    .legal-title {
-      font-family: 'Marcellus', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--sand-light); line-height: 1.1;
-      margin-bottom: 0.6rem;
-    }
-    .legal-title i { font-style: normal; color: var(--brick-red); }
-    .legal-divider {
-      width: 40px; height: 1px;
-      background: var(--brick-red);
-      margin: 2rem 0 3.5rem;
-    }
-    .legal-section { margin-bottom: 3rem; }
-    .legal-section h2 {
-      font-family: 'Marcellus', serif;
-      font-size: 1.1rem; color: var(--sand-light);
-      margin-bottom: 1rem; letter-spacing: 0.02em;
-    }
-    .legal-section p, .legal-section address {
-      font-size: 0.97rem; line-height: 1.9;
-      color: var(--text-body); font-style: normal;
-      margin-bottom: 0.7rem;
-    }
-    .legal-section a { color: var(--brick-red); text-decoration: none; transition: opacity 0.3s; }
-    .legal-section a:hover { opacity: 0.75; }
-    .legal-note {
-      margin-top: 3rem;
-      border-top: 1px solid var(--hairline);
-      padding-top: 2rem;
-      font-size: 0.86rem; color: var(--text-dim);
-      line-height: 1.85;
-    }
-    @media (max-width: 900px) {
-      .legal-wrap { padding: 8rem 1.8rem 5rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz – Bildhauerei Bielfeld GmbH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<div id="page-bg"></div>
+<body class="legal-page">
 
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">Bielfeld <em>·</em> GmbH</a>
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+    <span>Bielfeld</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="index.html#services">Leistungen</a></li>
-    <li><a href="index.html#gallery">Galerie</a></li>
-    <li><a href="index.html#about">Geschichte</a></li>
-    <li><a href="index.html#consultation">Beratung</a></li>
-    <li><a href="index.html#contact">Kontakt</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="geschichte.html">Geschichte</a></li>
+    <li><a href="beratung.html">Beratung</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
   <a href="tel:+49234351048" class="nav-tel">0234 35 10 48</a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMobileMenu">
-    <span></span>
-    <span></span>
-  </button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button>
 </nav>
 
 <div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
   <nav class="mobile-menu-inner">
     <ul class="mobile-nav-links">
-      <li><a href="index.html#services" class="mobile-nav-link">Leistungen</a></li>
-      <li><a href="index.html#gallery" class="mobile-nav-link">Galerie</a></li>
-      <li><a href="index.html#about" class="mobile-nav-link">Geschichte</a></li>
-      <li><a href="index.html#consultation" class="mobile-nav-link">Beratung</a></li>
-      <li><a href="index.html#contact" class="mobile-nav-link">Kontakt</a></li>
+      <li><a href="leistungen.html" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="galerie.html" class="mobile-nav-link">Galerie</a></li>
+      <li><a href="geschichte.html" class="mobile-nav-link">Geschichte</a></li>
+      <li><a href="beratung.html" class="mobile-nav-link">Beratung</a></li>
+      <li><a href="kontakt.html" class="mobile-nav-link">Kontakt</a></li>
     </ul>
     <a href="tel:+49234351048" class="mobile-nav-tel">0234 35 10 48</a>
     <span class="mobile-nav-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</span>
@@ -98,91 +46,97 @@
     <a href="index.html" class="legal-back">Zurück zur Startseite</a>
 
     <span class="label">Rechtliches</span>
-    <h1 class="legal-title">Impres<i>sum</i></h1>
-    <div class="legal-divider"></div>
+    <h1 class="h1-carved" style="font-size:clamp(2rem,4vw,2.8rem); margin-bottom:2rem;">Datenschutz</h1>
 
     <div class="legal-section">
-      <h2>Angaben gemäß § 5 TMG</h2>
-      <address>
-        Bildhauerei Bielfeld GmbH<br>
-        Freigrafendamm 60<br>
-        44803 Bochum-Altenbochum<br>
-        Deutschland
-      </address>
+      <h2>1. Datenschutz auf einen Blick</h2>
+      <h3>Allgemeine Hinweise</h3>
+      <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+
+      <h3>Datenerfassung auf dieser Website</h3>
+      <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+      <p><strong>Wie erfassen wir Ihre Daten?</strong><br>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen – etwa wenn Sie uns per E-Mail oder Telefon kontaktieren. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (vor allem technische Daten wie Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p>
+      <p><strong>Wofür nutzen wir Ihre Daten?</strong><br>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+      <p><strong>Welche Rechte haben Sie bezüglich Ihrer Daten?</strong><br>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+      <p>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Kontakt</h2>
-      <p>
-        Telefon: <a href="tel:+49234351048">0234 35 10 48</a><br>
-        E-Mail: <a href="mailto:info@bielfeld.de">info@bielfeld.de</a><br>
-        Website: <a href="https://www.bielfeld.de" target="_blank">www.bielfeld.de</a>
-      </p>
+      <h2>2. Verantwortlicher</h2>
+      <p>Bildhauerei Bielfeld GmbH<br>Freigrafendamm 60<br>44803 Bochum-Altenbochum</p>
+      <p>Telefon: <a href="tel:+49234351048">0234 35 10 48</a><br>E-Mail: <a href="mailto:info@bielfeld.de">info@bielfeld.de</a></p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Vertretungsberechtigte Geschäftsführerin</h2>
-      <p>Monika Bielfeld</p>
+      <h2>3. Hosting und Server-Log-Dateien</h2>
+      <p>Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+      <p>Der Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
+      <h3>Server-Log-Dateien</h3>
+      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt. Dies sind:</p>
+      <ul>
+        <li>Browsertyp und Browserversion</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Referrer URL</li>
+        <li>Hostname des zugreifenden Rechners</li>
+        <li>Uhrzeit der Serveranfrage</li>
+        <li>IP-Adresse</li>
+      </ul>
+      <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Handelsregister</h2>
-      <p>
-        Amtsgericht Bochum<br>
-        HRB: [bitte eintragen]
-      </p>
+      <h2>4. Kontaktaufnahme</h2>
+      <p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde.</p>
+      <p>Die von Ihnen übermittelten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Umsatzsteuer-Identifikationsnummer</h2>
-      <p>
-        Gemäß § 27a Umsatzsteuergesetz:<br>
-        [bitte eintragen]
-      </p>
+      <h2>5. Google Maps</h2>
+      <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung.</p>
+      <p>Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unseres Online-Angebots und zur leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die Einwilligung ist jederzeit widerrufbar.</p>
+      <p>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-      <p>
-        Monika Bielfeld<br>
-        Freigrafendamm 60<br>
-        44803 Bochum-Altenbochum
-      </p>
+      <h2>6. Ihre Rechte</h2>
+      <h3>Auskunft, Berichtigung, Löschung</h3>
+      <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
+      <h3>Recht auf Einschränkung der Verarbeitung</h3>
+      <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:</p>
+      <ul>
+        <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen.</li>
+        <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+        <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+        <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden.</li>
+      </ul>
+      <h3>Recht auf Datenübertragbarkeit</h3>
+      <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.</p>
+      <h3>Widerspruch gegen Werbe-E-Mails</h3>
+      <p>Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen vor.</p>
+      <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
+      <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde für Datenschutzfragen in Nordrhein-Westfalen ist die Landesbeauftragte für Datenschutz und Informationsfreiheit NRW:<br><a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a></p>
     </div>
+
+    <hr class="legal-separator">
 
     <div class="legal-section">
-      <h2>Haftung für Inhalte</h2>
-      <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-      </p>
-      <p>
-        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-      </p>
+      <h2>7. SSL-/TLS-Verschlüsselung</h2>
+      <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+      <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
     </div>
 
-    <div class="legal-section">
-      <h2>Haftung für Links</h2>
-      <p>
-        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-      </p>
-      <p>
-        Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
-      </p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Urheberrecht</h2>
-      <p>
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-      </p>
-      <p>
-        Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-      </p>
-    </div>
-
-    <div class="legal-note">
-      Quelle: Muster-Impressum von eRecht24
-    </div>
+    <div class="legal-note">Stand: 2025 · Bildhauerei Bielfeld GmbH, Bochum</div>
 
   </div>
 </main>
@@ -191,64 +145,28 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="f-logo">Bielfeld <em>·</em> GmbH</div>
-        <div class="f-since">Bildhauerei &amp; Grabmale · Bochum · Seit 1912</div>
+        <svg class="footer-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="f-logo">Bielfeld</div>
+        <div class="f-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</div>
       </div>
       <ul class="footer-nav">
-        <li><a href="index.html#services">Leistungen</a></li>
-        <li><a href="index.html#gallery">Galerie</a></li>
-        <li><a href="index.html#about">Geschichte</a></li>
-        <li><a href="index.html#contact">Kontakt</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
-      <div class="footer-legal">
-        © 2025 Bielfeld GmbH<br>Alle Rechte vorbehalten
+      <div class="footer-contact">
+        <a href="tel:+49234351048">0234 35 10 48</a>
+        <a href="mailto:info@bielfeld.de">info@bielfeld.de</a>
       </div>
     </div>
+    <div class="footer-legal">© 2025 Bielfeld GmbH · Alle Rechte vorbehalten</div>
   </div>
 </footer>
 
-<script>
-  // ── Navbar scroll (Optimized) ──
-  const nav = document.getElementById('navbar');
-  let isScrolling = false;
-
-  window.addEventListener('scroll', () => {
-    if (!isScrolling) {
-      window.requestAnimationFrame(() => {
-        nav.classList.toggle('scrolled', window.scrollY > 70);
-        isScrolling = false;
-      });
-      isScrolling = true;
-    }
-  }, { passive: true });
-  
-  nav.classList.add('scrolled'); // always show solid nav on legal pages
-
-  const hamburger   = document.getElementById('navHamburger');
-  const mobileMenu  = document.getElementById('navMobileMenu');
-  const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-tel');
-
-  function openMenu() {
-    hamburger.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    mobileMenu.classList.add('open');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('menu-open');
-  }
-  function closeMenu() {
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('menu-open');
-  }
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.contains('open') ? closeMenu() : openMenu();
-  });
-  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

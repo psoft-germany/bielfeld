@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geschichte – Bildhauerei Bielfeld GmbH</title>
+<meta name="description" content="Über 110 Jahre Bildhauerei Bielfeld: von der Gründung 1912 bis heute, in dritter Generation, am Freigrafendamm in Bochum.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- versteckte SVG-Filter für die "Verwitterung" des Steinmetzzeichens -->
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <filter id="weather-1912" x="-60%" y="-60%" width="220%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8"/>
+    </filter>
+    <filter id="weather-1980" x="-60%" y="-60%" width="220%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/>
+    </filter>
+  </defs>
+</svg>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+    <span>Bielfeld</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="geschichte.html" class="is-active">Geschichte</a></li>
+    <li><a href="beratung.html">Beratung</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <a href="tel:+49234351048" class="nav-tel">0234 35 10 48</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
+  <nav class="mobile-menu-inner">
+    <ul class="mobile-nav-links">
+      <li><a href="leistungen.html" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="galerie.html" class="mobile-nav-link">Galerie</a></li>
+      <li><a href="geschichte.html" class="mobile-nav-link">Geschichte</a></li>
+      <li><a href="beratung.html" class="mobile-nav-link">Beratung</a></li>
+      <li><a href="kontakt.html" class="mobile-nav-link">Kontakt</a></li>
+    </ul>
+    <a href="tel:+49234351048" class="mobile-nav-tel">0234 35 10 48</a>
+    <span class="mobile-nav-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</span>
+  </nav>
+</div>
+
+<header class="page-head container">
+  <span class="label reveal">Unser Erbe</span>
+  <h1 class="h1-carved reveal d1">Geschichte</h1>
+  <p class="lede reveal d2">Über 110 Jahre Tradition in Bochum.</p>
+</header>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+
+    <div class="history-intro reveal">
+      <p>Die Bildhauerei Bielfeld ist ein Bochumer Original. Was 1912 als handwerkliche Schnitzerei begann, ist heute ein renommierter Familienbetrieb in <strong>dritter Generation</strong> – mit Werken, die in ganz Deutschland und Österreich und sogar in den USA stehen.</p>
+      <p>Klaus Bielfeld, Steinbildhauermeister und Obermeister der Bildhauer- und Steinmetz-Innung Bochum, wurde 1999 mit dem <strong>Staatspreis des Landes NRW</strong> ausgezeichnet. Bis heute führen <strong>Monika und Klaus Bielfeld</strong> das Unternehmen gemeinsam und stehen persönlich für Qualität und Beratung.</p>
+    </div>
+
+    <!-- Signet-Block: das Steinmetzzeichen im Wandel der Generationen -->
+    <div class="sign-block reveal d1">
+      <div class="sign-item">
+        <svg class="mark-weather" viewBox="0 0 48 64" style="filter:url(#weather-1912); color: var(--ink-dim);" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="sign-year">1912</div>
+        <div class="sign-text">Wie viele Steinmetz-Familien führte auch Alfred Bielfeld sen. ein eigenes Werkzeichen – traditionell in jeden vollendeten Stein geritzt.</div>
+      </div>
+      <div class="sign-item">
+        <svg class="mark-weather" viewBox="0 0 48 64" style="filter:url(#weather-1980); color: var(--stone);" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="sign-year">1980</div>
+        <div class="sign-text">Mit Gründung der GmbH übernahmen Klaus &amp; Monika Bielfeld das Zeichen der Familie – als Verbindung zu drei Generationen Handwerk.</div>
+      </div>
+      <div class="sign-item">
+        <svg class="mark-weather" viewBox="0 0 48 64" style="color: var(--moss);" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="sign-year">Heute</div>
+        <div class="sign-text">Dasselbe Zeichen, neu geschnitten – als Signet dieser Website und als stille Unterschrift unserer Arbeit.</div>
+      </div>
+    </div>
+
+    <div class="timeline reveal d2">
+      <div class="tl-item">
+        <div class="tl-year">1912</div>
+        <div class="tl-text">Alfred Bielfeld sen. gründet den Betrieb in der Holzhandlung Krüsemann an der Schützenbahn – zunächst als Holzschnitzerei.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1920er</div>
+        <div class="tl-text">Erweiterung um Grabkreuze; der Betrieb wächst stetig und prägt das Bochumer Friedhofsbild.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1955</div>
+        <div class="tl-text">Albert Bielfeld jun. übernimmt und richtet die erste Steinausstellung ein. Naturstein wird zum Kernmaterial.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1980</div>
+        <div class="tl-text">Klaus &amp; Monika Bielfeld gründen die GmbH und legen den Grundstein für das Ausstellungs- und Ateliergebäude am Freigrafendamm 60.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1988</div>
+        <div class="tl-text">Erweiterung um Denkmalpflege und Steinrestaurierung – Kompetenz für historische Bausubstanz.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1999</div>
+        <div class="tl-text">Klaus Bielfeld erhält den Staatspreis NRW – eine Auszeichnung für herausragendes Handwerk und künstlerische Leistung.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">Heute</div>
+        <div class="tl-text">Ein lebendiger Familienbetrieb – handwerkliche Tradition und zeitgenössische Bildhauerkunst unter einem Dach.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="pull-quote">
+  <blockquote class="reveal">
+    Stein ist das dauerhafteste Material, das der Mensch kennt – wir geben ihm Form, Bedeutung und Seele.
+    <cite>Leitgedanke der Bildhauerei Bielfeld</cite>
+  </blockquote>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="footer-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="f-logo">Bielfeld</div>
+        <div class="f-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+      <div class="footer-contact">
+        <a href="tel:+49234351048">0234 35 10 48</a>
+        <a href="mailto:info@bielfeld.de">info@bielfeld.de</a>
+      </div>
+    </div>
+    <div class="footer-legal">© 2025 Bielfeld GmbH · Alle Rechte vorbehalten</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

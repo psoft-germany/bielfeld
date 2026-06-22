@@ -1,449 +1,169 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bildhauerei Bielfeld GmbH – Bochum | Seit 1912</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Marcellus&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bildhauerei Bielfeld GmbH – Bochum · Seit 1912</title>
+<meta name="description" content="Bildhauerei Bielfeld – Grabmale, Skulpturen und Steinmetzarbeiten aus Bochum. Seit 1912 in dritter Generation. Persönliche Beratung vor Ort am Freigrafendamm 60.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="page-bg"></div>
-
+<!-- ═══ NAVIGATION ═══ -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Bielfeld <em>·</em> GmbH</a>
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+    <span>Bielfeld</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="#services">Leistungen</a></li>
-    <li><a href="#gallery">Galerie</a></li>
-    <li><a href="#about">Geschichte</a></li>
-    <li><a href="#consultation">Beratung</a></li>
-    <li><a href="#contact">Kontakt</a></li>
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="geschichte.html">Geschichte</a></li>
+    <li><a href="beratung.html">Beratung</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
   <a href="tel:+49234351048" class="nav-tel">0234 35 10 48</a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMobileMenu">
-    <span></span>
-    <span></span>
-  </button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button>
 </nav>
 
 <div class="nav-mobile-menu" id="navMobileMenu" aria-hidden="true">
   <nav class="mobile-menu-inner">
     <ul class="mobile-nav-links">
-      <li><a href="#services" class="mobile-nav-link">Leistungen</a></li>
-      <li><a href="#gallery" class="mobile-nav-link">Galerie</a></li>
-      <li><a href="#about" class="mobile-nav-link">Geschichte</a></li>
-      <li><a href="#consultation" class="mobile-nav-link">Beratung</a></li>
-      <li><a href="#contact" class="mobile-nav-link">Kontakt</a></li>
+      <li><a href="leistungen.html" class="mobile-nav-link">Leistungen</a></li>
+      <li><a href="galerie.html" class="mobile-nav-link">Galerie</a></li>
+      <li><a href="geschichte.html" class="mobile-nav-link">Geschichte</a></li>
+      <li><a href="beratung.html" class="mobile-nav-link">Beratung</a></li>
+      <li><a href="kontakt.html" class="mobile-nav-link">Kontakt</a></li>
     </ul>
     <a href="tel:+49234351048" class="mobile-nav-tel">0234 35 10 48</a>
-    <span class="mobile-nav-since">Bildhauerei & Steinmetz · Bochum · Seit 1912</span>
+    <span class="mobile-nav-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</span>
   </nav>
 </div>
 
+<!-- ═══ HERO ═══ -->
 <section id="hero">
-  <div class="hero-photo"></div>
-  <div class="hero-bg"></div>
-  <div class="hero-vline hero-vline--l"></div>
-  <div class="hero-vline hero-vline--r"></div>
-
-  <div class="hero-content">
-    <p class="hero-overline">Bildhauerei & Steinmetz · Bochum · Seit 1912</p>
-    <h1 class="hero-title">BILDHAUEREI<br><span style="color: var(--brick-red)">BIELFELD</span></h1>
-    <div class="hero-rule"></div>
-    <p class="hero-sub">Drei Generationen. Eine Leidenschaft.</p>
-    <div class="hero-actions">
-      <a href="#gallery" class="btn btn--solid">Unsere Arbeiten</a>
-      <a href="#contact" class="btn btn--outline">Beratung vereinbaren</a>
-    </div>
-  </div>
-
-  <div class="hero-scroll">
-    <span>Entdecken</span>
-    <div class="scroll-bar"></div>
-  </div>
-</section>
-
-<section id="services" class="section">
+  <div class="hero-grid-lines"></div>
+  <svg class="hero-mark-bg" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="2"/></svg>
   <div class="container">
-    <span class="label reveal">Was wir tun</span>
-    <h2 class="h2 reveal d1">Unser <i>Angebot</i></h2>
-    <p class="services-lead reveal d1">
-      Jedes Stück entsteht hier in Bochum – von Hand, nach Maß, als Unikat.
-    </p>
-
-    <div class="services-grid">
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">01</span>
-          <div class="s-title">Grabmale</div>
-          <p class="s-desc">Vom ersten Entwurf bis zur Aufstellung. Persönlich, handwerklich und ohne Zeitdruck.</p>
-        </div>
+    <div class="hero-content">
+      <span class="label reveal">Bildhauerei &amp; Steinmetz · Bochum</span>
+      <h1 class="h1-carved hero-title reveal d1">Bielfeld</h1>
+      <p class="lede hero-sub reveal d2">Seit 1912 arbeiten wir in Bochum mit Stein – heute in <em style="color:var(--moss); font-style:italic;">dritter Generation</em>. Grabmale, Skulpturen und Restaurierung, von Hand gefertigt und persönlich begleitet.</p>
+      <div class="btn-row reveal d3">
+        <a href="leistungen.html" class="btn btn--solid">Leistungen entdecken</a>
+        <a href="beratung.html" class="btn btn--outline">Beratung vereinbaren</a>
       </div>
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">02</span>
-          <div class="s-title">Bildhauerei</div>
-          <p class="s-desc">Naturstein von Hand – Granit, Marmor, Basalt, Sandstein und mehr.</p>
-        </div>
-      </div>
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">03</span>
-          <div class="s-title">Skulpturen</div>
-          <p class="s-desc">Einzelstücke für Garten, Innenraum oder den öffentlichen Raum – jedes auf Maß.</p>
-        </div>
-      </div>
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">04</span>
-          <div class="s-title">Findlinge</div>
-          <p class="s-desc">Solitärstücke als ruhiger Blickpunkt – im Garten, am Haus oder auf dem Friedhof.</p>
-        </div>
-      </div>
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">05</span>
-          <div class="s-title">Brunnen</div>
-          <p class="s-desc">Handgemeißelt aus Naturstein – beständig im Material, präzise in der Ausführung.</p>
-        </div>
-      </div>
-      <div class="s-card reveal">
-        <div class="s-card-body">
-          <span class="s-num">06</span>
-          <div class="s-title">Restaurierung</div>
-          <p class="s-desc">Reparatur, Pflege und Denkmalpflege für historische Grabmale und Steinarbeiten.</p>
-        </div>
-      </div>
+      <p class="hero-since reveal d3">Freigrafendamm 60 · 44803 Bochum-Altenbochum</p>
     </div>
-
-    <a href="#consultation" class="btn btn--outline reveal d4" style="margin-top:2.5rem;">Beratung vereinbaren</a>
   </div>
 </section>
 
-<section id="gallery" class="section">
+<!-- ═══ FAKTEN ═══ -->
+<section class="fact-strip">
   <div class="container">
-    <div class="gallery-head">
-      <span class="label reveal">Inspirationen</span>
-      <h2 class="h2 reveal d1">Unsere <i>Arbeiten</i></h2>
-      <p class="reveal d2">Einige Arbeiten aus mehr als 110 Jahren.</p>
+    <div class="fact reveal">
+      <div class="fact-num">1912</div>
+      <div class="fact-text">Gründungsjahr</div>
     </div>
-
-    <div class="gallery-expand-wrap">
-      <div class="gallery-masonry reveal" id="galleryMasonry">
-        <div class="g-item">
-          <div class="g-placeholder" style="height:260px;">Grabmal aus Granit<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Grabmal, Granit poliert</span></div>
-        </div>
-        <div class="g-item">
-          <div class="g-placeholder" style="height:380px;">Marmorskulptur<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Figürliche Skulptur, Marmor</span></div>
-        </div>
-        <div class="g-item">
-          <div class="g-placeholder" style="height:220px;">Natursteinarbeit<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Natursteinverlegung</span></div>
-        </div>
-        <div class="g-item g-item--extra">
-          <div class="g-placeholder" style="height:340px;">Granitgrabmal mit Schrift<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Schriftgravur, Granit</span></div>
-        </div>
-        <div class="g-item g-item--extra">
-          <div class="g-placeholder" style="height:200px;">Steinrestaurierung<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Restaurierung, Denkmalschutz</span></div>
-        </div>
-        <div class="g-item g-item--extra">
-          <div class="g-placeholder" style="height:300px;">Brunnenskulptur<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Brunnenanlage, Sandstein</span></div>
-        </div>
-        <div class="g-item g-item--extra">
-          <div class="g-placeholder" style="height:240px;">Basaltarbeit<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Grabgestaltung, Basalt</span></div>
-        </div>
-        <div class="g-item g-item--extra">
-          <div class="g-placeholder" style="height:360px;">Öffentliche Skulptur<br><small style="font-size:.7rem;opacity:.6;">[Eigenes Foto einfügen]</small></div>
-          <div class="g-overlay"><span class="g-caption">Skulptur im öffentlichen Raum</span></div>
-        </div>
-      </div>
-
-      <div class="gallery-fade" id="galleryFade"></div>
-
-      <button class="gallery-toggle" id="galleryToggle" aria-expanded="false">
-        <span class="gallery-toggle__label">Alle Arbeiten ansehen</span>
-        <span class="gallery-toggle__arrow">↓</span>
-      </button>
+    <div class="fact reveal d1">
+      <div class="fact-num">3.</div>
+      <div class="fact-text">Generation in Familienhand</div>
     </div>
-
-    <p class="gallery-note">
-      ← Diese Felder werden durch eigene Fotos der Bildhauerei Bielfeld ersetzt →
-    </p>
+    <div class="fact reveal d2">
+      <div class="fact-num">100+</div>
+      <div class="fact-text">Steine in der Ausstellung</div>
+    </div>
+    <div class="fact reveal d3">
+      <div class="fact-num">1999</div>
+      <div class="fact-text">Staatspreis NRW</div>
+    </div>
   </div>
 </section>
 
-<section id="about" class="section">
+<!-- ═══ KATALOG-NAVIGATION ═══ -->
+<section class="section">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-body">
-        <span class="label reveal">Unser Erbe</span>
-        <h2 class="h2 reveal d1">Über <i>110 Jahre</i><br>Tradition in Bochum</h2>
-        <div class="reveal d2">
-          <p>1912 als Holzschnitzerei gegründet, heute in der <strong>dritten Generation</strong>. Unsere Arbeiten stehen in ganz Deutschland, in Österreich – und in den USA.</p>
-          <p>Jedes Grabmal, jede Skulptur ist ein Einzelstück – entworfen und gefertigt für einen bestimmten Menschen, einen bestimmten Ort.</p>
-          <p>Klaus Bielfeld ist Steinbildhauermeister und Obermeister der Bildhauer- und Steinmetz-Innung Bochum. 1999 erhielt er den <strong>Staatspreis des Landes NRW</strong>. <strong>Monika und Klaus Bielfeld</strong> führen den Betrieb gemeinsam – und sind persönlich bei jeder Beratung dabei.</p>
-        </div>
-        <a href="#consultation" class="btn btn--solid reveal d3" style="margin-top:1.5rem;">Zur Beratung</a>
-      </div>
+    <span class="label reveal">Entdecken Sie</span>
+    <h2 class="h2-accent reveal d1">Drei Wege zu <em>uns</em></h2>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="cat-grid reveal d2">
+      <a href="leistungen.html" class="cat-card">
+        <span class="label">Kat.-Nr. 01</span>
+        <h3>Leistungen</h3>
+        <p>Grabmale, Skulpturen, Brunnen und Restaurierung – unser Angebot im Überblick.</p>
+        <span class="cat-arrow">Ansehen</span>
+      </a>
+      <a href="galerie.html" class="cat-card">
+        <span class="label">Kat.-Nr. 02</span>
+        <h3>Galerie</h3>
+        <p>Eine Auswahl ausgeführter Arbeiten aus Granit, Marmor, Basalt und Sandstein.</p>
+        <span class="cat-arrow">Ansehen</span>
+      </a>
+      <a href="geschichte.html" class="cat-card">
+        <span class="label">Kat.-Nr. 03</span>
+        <h3>Geschichte</h3>
+        <p>Über 110 Jahre Familienbetrieb am Freigrafendamm – von 1912 bis heute.</p>
+        <span class="cat-arrow">Ansehen</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-      <div class="timeline reveal d2">
-        <div class="tl-item reveal">
-          <div class="tl-year">1912</div>
-          <div class="tl-text">Alfred Bielfeld sen. gründet den Betrieb in der Holzhandlung Krüsemann an der Schützenbahn – zunächst als Holzschnitzerei.</div>
-        </div>
-        <div class="tl-item reveal d1">
-          <div class="tl-year">1920er</div>
-          <div class="tl-text">Erweiterung um Grabkreuze; der Betrieb wächst stetig und prägt das Bochumer Friedhofsbild.</div>
-        </div>
-        <div class="tl-item reveal d1">
-          <div class="tl-year">1955</div>
-          <div class="tl-text">Albert Bielfeld jun. übernimmt und richtet die erste Steinausstellung ein. Naturstein wird zum Kernmaterial.</div>
-        </div>
-        <div class="tl-item reveal d2">
-          <div class="tl-year">1980</div>
-          <div class="tl-text">Klaus & Monika Bielfeld gründen die GmbH und legen den Grundstein für das Ausstellungs- und Ateliergebäude am Freigrafendamm 60.</div>
-        </div>
-        <div class="tl-item reveal d2">
-          <div class="tl-year">1988</div>
-          <div class="tl-text">Erweiterung um Denkmalpflege und Steinrestaurierung – Kompetenz für historische Bausubstanz.</div>
-        </div>
-        <div class="tl-item reveal d3">
-          <div class="tl-year">1999</div>
-          <div class="tl-text">Klaus Bielfeld erhält den Staatspreis NRW – eine Auszeichnung für herausragendes Handwerk und künstlerische Leistung.</div>
-        </div>
-        <div class="tl-item reveal d3">
-          <div class="tl-year">Heute</div>
-          <div class="tl-text">Ein lebendiger Familienbetrieb – handwerkliche Tradition und zeitgenössische Bildhauerkunst unter einem Dach.</div>
-        </div>
+<!-- ═══ BERATUNGS-TEASER ═══ -->
+<section class="teaser-band">
+  <div class="container">
+    <div class="teaser-grid">
+      <div class="reveal">
+        <span class="label">Keine Bestellung im Onlineshop</span>
+        <h2>Beratung beginnt vor Ort – mit Zeit, einem Stein in der Hand und einem offenen Ohr.</h2>
+        <p>In unserer Ausstellung am Freigrafendamm zeigen wir Ihnen über 100 Steine im Original. Gemeinsam mit Steinbildhauermeister Klaus Bielfeld entwickeln Sie ein Grabmal, das zu Ihrer Geschichte passt.</p>
+      </div>
+      <div class="reveal d2" style="display:flex; flex-direction:column; gap:1.1rem; align-items:flex-start;">
+        <a href="beratung.html" class="btn btn--outline">Mehr zur Beratung</a>
+        <a href="kontakt.html" class="btn btn--outline">Termin vereinbaren</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ═══ ZITAT ═══ -->
 <div class="pull-quote">
   <blockquote class="reveal">
-    „Stein ist das dauerhafteste Material, das der Mensch kennt –<br>
-    und wir geben ihm Form, Bedeutung und Seele."
-    <cite>— Klaus Bielfeld, Steinbildhauermeister & Träger des Staatspreises NRW</cite>
+    Stein ist das dauerhafteste Material, das der Mensch kennt – wir geben ihm Form, Bedeutung und Seele.
+    <cite>Leitgedanke der Bildhauerei Bielfeld</cite>
   </blockquote>
 </div>
 
-<section id="consultation" class="section">
-  <div class="container">
-    <div class="consult-grid">
-      <div class="consult-img-wrap reveal">
-      	<a href="https://ibb.co/3K6hyJC"><img src="https://i.ibb.co/LKjpzGZ/IMG-3266.jpg" alt="IMG-3266" border="0"></a>
-      </div>
-      <div class="consult-text reveal d2">
-        <span class="label">Persönliche Betreuung</span>
-        <h2 class="h2">Beratung & Verkauf<br><i>vor Ort</i></h2>
-        <p>Wer ein Grabmal sucht, braucht Zeit – und jemanden, der zuhört. In unserer Ausstellung am Freigrafendamm 60 können Sie über hundert Steine aus nächster Nähe sehen und anfassen: Granit, Marmor, Basalt, Kalkstein, Sandstein. Vom ersten Gespräch bis zur Aufstellung kümmern wir uns um alles – persönlich und ohne Eile.</p>
-        <ul class="feature-list">
-          <li>Ausstellung mit über 100 Steinen – Freigrafendamm 60, Bochum-Altenbochum</li>
-          <li>Vielfalt aus Granit, Marmor, Basalt, Kalkstein, Sandstein und mehr</li>
-          <li>Individuelle Beratung durch Steinbildhauermeister Klaus Bielfeld</li>
-          <li>Klares, schlichtes Design – zeitlos und handwerklich präzise</li>
-          <li>Entwurf, Fertigung und Aufstellung aus einer Hand</li>
-          <li>Fachkundige Nachbetreuung: Pflege, Reinigung, Renovierung</li>
-          <li>Bundesweite Lieferung und Montage möglich</li>
-        </ul>
-        <a href="#contact" class="btn btn--solid" style="margin-top:.5rem;">Termin vereinbaren</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info-top">
-        <span class="label reveal">Finden Sie uns</span>
-        <h2 class="h2 reveal d1">Kontakt &<br><i>Anfahrt</i></h2>
-        <div class="contact-blocks reveal d2">
-          <div class="c-block">
-            <div class="c-label">Adresse</div>
-            <div class="c-value">
-              Bildhauerei Bielfeld GmbH<br>
-              Freigrafendamm 60<br>
-              44803 Bochum-Altenbochum
-            </div>
-          </div>
-          <div class="c-block">
-            <div class="c-label">Telefon</div>
-            <div class="c-value">
-              <a href="tel:+49234351048">0234 35 10 48</a>
-            </div>
-          </div>
-          <div class="c-block">
-            <div class="c-label">E-Mail</div>
-            <div class="c-value">
-              <a href="mailto:info@bielfeld.de">info@bielfeld.de</a>
-            </div>
-          </div>
-          <div class="c-block">
-            <div class="c-label">Website</div>
-            <div class="c-value">
-              <a href="https://www.bielfeld.de" target="_blank">www.bielfeld.de</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-map-wrap reveal d2">
-        <iframe class="styled-map"
-                src="https://maps.google.com/maps?q=Freigrafendamm+60,+Bochum&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="420"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <div class="contact-hours-wrap reveal d3">
-        <div class="c-hours">
-          <div class="c-hours-title">Öffnungszeiten</div>
-          <div class="h-row">
-            <span>Montag – Freitag</span><span>Nach Vereinbarung</span>
-          </div>
-          <div class="h-row">
-            <span>Samstag</span><span>Nach Vereinbarung</span>
-          </div>
-          <div class="h-row">
-            <span>Sonntag & Feiertage</span><span>Geschlossen</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="f-logo">Bielfeld <em>·</em> GmbH</div>
-        <div class="f-since">Bildhauerei & Grabmale · Bochum · Seit 1912</div>
+        <svg class="footer-mark" viewBox="0 0 48 64" aria-hidden="true"><path d="M24 4 L24 60 M24 4 L8 20 M24 4 L40 20 M12 38 L36 38" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
+        <div class="f-logo">Bielfeld</div>
+        <div class="f-since">Bildhauerei &amp; Steinmetz · Bochum · Seit 1912</div>
       </div>
       <ul class="footer-nav">
-        <li><a href="#services">Leistungen</a></li>
-        <li><a href="#gallery">Galerie</a></li>
-        <li><a href="#about">Geschichte</a></li>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="geschichte.html">Geschichte</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
-      <div class="footer-legal">
-        © 2025 Bielfeld GmbH<br>Alle Rechte vorbehalten
+      <div class="footer-contact">
+        <a href="tel:+49234351048">0234 35 10 48</a>
+        <a href="mailto:info@bielfeld.de">info@bielfeld.de</a>
       </div>
     </div>
+    <div class="footer-legal">© 2025 Bielfeld GmbH · Alle Rechte vorbehalten</div>
   </div>
 </footer>
 
-<script>
-  // ── Navbar scroll (Optimized with requestAnimationFrame) ──
-  const nav = document.getElementById('navbar');
-  let isScrolling = false;
-
-  window.addEventListener('scroll', () => {
-    if (!isScrolling) {
-      window.requestAnimationFrame(() => {
-        nav.classList.toggle('scrolled', window.scrollY > 70);
-        isScrolling = false;
-      });
-      isScrolling = true;
-    }
-  }, { passive: true });
-
-  // ── Hamburger / Mobile Menu ────────────────────────────
-  const hamburger   = document.getElementById('navHamburger');
-  const mobileMenu  = document.getElementById('navMobileMenu');
-  const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-tel');
-
-  function openMenu() {
-    hamburger.classList.add('open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    mobileMenu.classList.add('open');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('menu-open');
-  }
-
-  function closeMenu() {
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('menu-open');
-  }
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.contains('open') ? closeMenu() : openMenu();
-  });
-
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  // ── Scroll-reveal via IntersectionObserver ─────────────
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  reveals.forEach(el => io.observe(el));
-
-  // ── Gallery expand/collapse ────────────────────────────
-  const galleryToggle = document.getElementById('galleryToggle');
-  const galleryMasonry = document.getElementById('galleryMasonry');
-  const galleryFade = document.getElementById('galleryFade');
-  const extraItems = galleryMasonry.querySelectorAll('.g-item--extra');
-
-  galleryToggle.addEventListener('click', () => {
-    const isOpen = galleryMasonry.classList.contains('open');
-
-    if (!isOpen) {
-      // Expand
-      galleryMasonry.classList.add('open');
-      galleryFade.classList.add('hidden');
-      galleryToggle.setAttribute('aria-expanded', 'true');
-      galleryToggle.querySelector('.gallery-toggle__label').textContent = 'Weniger anzeigen';
-      galleryToggle.querySelector('.gallery-toggle__arrow').classList.add('rotated');
-
-      extraItems.forEach((item, i) => {
-        item.style.animationDelay = (i * 0.07) + 's';
-        item.classList.add('entering');
-      });
-    } else {
-      // Collapse
-      galleryMasonry.classList.remove('open');
-      galleryFade.classList.remove('hidden');
-      galleryToggle.setAttribute('aria-expanded', 'false');
-      galleryToggle.querySelector('.gallery-toggle__label').textContent = 'Alle Arbeiten ansehen';
-      galleryToggle.querySelector('.gallery-toggle__arrow').classList.remove('rotated');
-      extraItems.forEach(item => {
-        item.classList.remove('entering');
-        item.style.animationDelay = '';
-      });
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          galleryToggle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      });
-    }
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
