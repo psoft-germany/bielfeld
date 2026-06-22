@@ -60,10 +60,10 @@ ul { list-style: none; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--brick);
-  display: inline-flex; align-items: center; gap: 0.6rem;
+  display: inline-flex; align-items: center; gap: 0.85rem;
   margin-bottom: 1.3rem;
 }
-.label::before { content: ''; width: 16px; height: 1px; background: var(--brick); }
+.label::before { content: ''; width: 18px; height: 1px; background: var(--brick); }
 
 .h1-carved {
   font-family: 'Cinzel', serif;
@@ -285,7 +285,8 @@ body.menu-open { overflow: hidden; }
 
 /* ─── Seiten-Titelband (Unterseiten) ──────────────────── */
 .page-head {
-  padding: 11rem 0 4.5rem;
+  padding-top: 11rem;
+  padding-bottom: 4.5rem;
   border-top: none;
 }
 .page-head .h1-carved { font-size: clamp(2.2rem, 6vw, 3.6rem); margin-bottom: 1.4rem; }
@@ -569,7 +570,7 @@ footer { border-top: 1px solid var(--line); background: var(--limestone); paddin
   .nav-links, .nav-tel { display: none; }
   .nav-hamburger { display: flex; }
   .section { padding: 5rem 0; }
-  .page-head { padding: 8.5rem 0 3rem; }
+  .page-head { padding-top: 8.5rem; padding-bottom: 3rem; }
   .legal-wrap { padding: 8.5rem 1.6rem 4rem; }
 
   .fact-strip .container { grid-template-columns: repeat(2, 1fr); }
