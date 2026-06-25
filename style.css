@@ -50,8 +50,7 @@ img { max-width: 100%; display: block; }
 ul { list-style: none; }
 
 /* ─── Steinmetzzeichen (Signet) ───────────────────────── */
-.mark { width: 20px; height: 27px; color: var(--brick); flex-shrink: 0; }
-.mark path { vector-effect: non-scaling-stroke; }
+.mark { width: 20px; height: 29px; color: var(--brick); flex-shrink: 0; }
 
 /* ─── Typografie-Bausteine ────────────────────────────── */
 .label {
@@ -152,7 +151,7 @@ nav#navbar.scrolled {
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--ink);
 }
-.nav-mark { width: 16px; height: 22px; }
+.nav-mark { width: 16px; height: 23px; }
 
 .nav-links { display: flex; gap: 2.3rem; }
 .nav-links a {
@@ -460,7 +459,7 @@ body.menu-open { overflow: hidden; }
   padding: 3rem 0; margin-bottom: 5rem;
 }
 .sign-item { text-align: center; padding: 0 1rem; }
-.sign-item .mark-weather { width: 30px; height: 40px; margin: 0 auto 1.1rem; }
+.sign-item .mark-weather { width: 30px; height: 44px; margin: 0 auto 1.1rem; }
 .sign-item .sign-year { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--teal); margin-bottom: 0.5rem; }
 .sign-item .sign-text { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.7; }
 
@@ -484,7 +483,7 @@ body.menu-open { overflow: hidden; }
   padding: 0.85rem 0; border-bottom: 1px solid var(--line);
   font-size: 0.96rem; color: var(--ink-soft);
 }
-.feature-list li .mark { width: 13px; height: 17px; margin-top: 0.2rem; }
+.feature-list li .mark { width: 13px; height: 19px; margin-top: 0.2rem; }
 
 .material-strip { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.6rem 0 2rem; }
 
@@ -521,7 +520,7 @@ footer { border-top: 1px solid var(--line); background: var(--limestone); paddin
   align-items: start; margin-bottom: 2.5rem;
 }
 .footer-brand { display: flex; flex-direction: column; gap: 0.6rem; }
-.footer-mark { width: 18px; height: 24px; color: var(--brick); margin-bottom: 0.3rem; }
+.footer-mark { width: 18px; height: 26px; color: var(--brick); margin-bottom: 0.3rem; }
 .f-logo { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); }
 .f-since { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.06em; color: var(--ink-dim); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; }
