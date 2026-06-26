@@ -361,7 +361,7 @@ body.menu-open { overflow: hidden; }
 /* ─── Katalogliste (Leistungen) ───────────────────────── */
 .entry-list { border-top: 1px solid var(--line); }
 .entry {
-  display: grid; grid-template-columns: 110px 1fr 2fr;
+  display: grid; grid-template-columns: 1fr 2fr;
   gap: 2.5rem; align-items: start;
   padding: 2.8rem 0;
   border-bottom: 1px solid var(--line);
