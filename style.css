@@ -244,7 +244,8 @@ body.menu-open { overflow: hidden; }
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
 }
-.hero-content { position: relative; z-index: 2; max-width: 700px; }
+#hero .container { width: 100%; }
+.hero-content { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
 .hero-title {
   font-size: clamp(2.6rem, 7vw, 5.2rem);
   margin: 0.6rem 0 1.6rem;
@@ -534,7 +535,7 @@ footer { border-top: 1px solid var(--line); background: var(--limestone); paddin
 /* ─── Legal-Seiten (Impressum / Datenschutz) ──────────── */
 .legal-wrap { max-width: 740px; margin: 0 auto; padding: 11rem 3.5rem 6rem; }
 .legal-back {
-  display: inline-flex; align-items: center; gap: 0.6rem;
+  display: flex; width: fit-content; align-items: center; gap: 0.6rem;
   font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem;
   letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-dim);
   text-decoration: none; margin-bottom: 3rem; transition: color 0.3s;
